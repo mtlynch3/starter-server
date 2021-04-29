@@ -4,15 +4,17 @@ const { Student, Campus } = require('../database/models');
 
 const ash = require('express-async-handler');
 
-// router.get('/', function(req, res, next) {
-//   Campus.findAll({include: [Student]}) // this is a JOIN;
-//     .then(campuses => res.status(200).json(campuses))
-//     .catch(err => next(err))
-// });
+/** GET ALL CAMPUSES */
 
 router.get('/', ash(async(req, res) => {
   let campuses = await Campus.findAll({include: [Student]});
   res.status(200).json(campuses);
+}));
+
+/** GET CAMPUS BY ID*/
+router.get('/:id', ash(async(req, res) => {
+  let campus = await Campus.findByPk(req.params.id, {include: [Student]});
+  res.status(200).json(campus);
 }));
 
 // Export our router, so that it can be imported to construct our apiRouter;
