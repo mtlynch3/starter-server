@@ -8,5 +8,5 @@ Campus.hasMany(Student);
 
 module.exports = {
   Student,
-  Campus
+  Campus,
 };
