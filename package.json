@@ -1,7 +1,7 @@
 {
   "name": "starter-server",
   "version": "1.0.0",
-  "description": "backend app for webdevsp21 final",
+  "description": "backend for crud app",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
