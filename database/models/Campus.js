@@ -10,8 +10,16 @@ const Campus = db.define("campus", {
 
   description: {
     type: Sequelize.STRING,
-  }
+  },
 
+  imageUrl:{
+    type: URL,
+    defaultValue:" "
+  },
+
+  description:{
+    type:Sequelize.STRING
+  }
 });
 
 module.exports = Campus;
