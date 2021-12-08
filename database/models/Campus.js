@@ -8,17 +8,18 @@ const Campus = db.define("campus", {
     allowNull: false
   },
 
-  description: {
-    type: Sequelize.STRING,
-  },
-
   imageUrl:{
     type: URL,
     defaultValue:" "
   },
 
+  address: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+
   description:{
-    type:Sequelize.STRING(5000)
+    type:Sequelize.TEXT('long')
   }
 });
 
