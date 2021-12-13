@@ -1,6 +1,6 @@
 const dbName = 'starter-server';
 const dbUser = 'postgres';
-const dbPwd = 'r4Kdr!p';
+const dbPwd = '123';
 
 module.exports = {
   dbName,
