@@ -13,7 +13,5 @@ const db = new Sequelize(dbName, dbUser, dbPwd, {
   dialect: 'postgres'
 });
 
-
-
 // Export our instance of Sequelize, which will be modified with models;
 module.exports = db;
